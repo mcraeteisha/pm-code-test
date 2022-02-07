@@ -14,15 +14,16 @@ class NoteController extends Controller
         return new NoteCollection(Note::all());
     }
 
-    public function show($id)
+    public function show(Note $note)
     {
-        return new NoteResource(Note::findOrFail($id));
+        return new NoteResource($note);
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'required|min:2|max:255',
+            'description' => 'required|min:10|max:500'
         ]);
 
         $note = Note::create($request->all());
