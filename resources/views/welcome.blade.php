@@ -18,23 +18,14 @@
         </style>
     </head>
     <body>
-    <div id="app">
-        <nav class="navbar navbar-findcond">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ route('web') }}">Self-Affirming Notes</a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active">
-                            <a href="{{ route('sign') }}">Leave a love note!</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        @yield('content')
+    <div>
+        <b-nav tabs fill>
+            <b-nav-item active>Home</b-nav-item>
+            <b-nav-item>Self-Affirming Notes</b-nav-item>
+        </b-nav>
     </div>
+    </div>
+    <div id="copyright text-right">© Copyright 2022 Teisha McRae</div>
     <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
