@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use app\Note;
 use app\Http\Resources\Note as NoteResource;
 use app\Http\Resources\NoteCollection;
+use app\Http\Controllers\Controller;
 
 class NoteController extends Controller
 {

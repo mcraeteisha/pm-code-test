@@ -17,6 +17,7 @@ class CreateNotesTable extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->text('description');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

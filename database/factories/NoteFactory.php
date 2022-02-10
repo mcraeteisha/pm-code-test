@@ -5,6 +5,9 @@ namespace Database\Factories;
 use app\Models\Note;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use Faker\Generator as Faker;
+
+require_once 'vendor/autoload.php';
 
 class NoteFactory extends Factory
 {
@@ -22,6 +25,7 @@ class NoteFactory extends Factory
     public function definition()
     {
         return [
+            'id' => $this->faker->uuid(),
             'name' => $this->faker->name,
             'description' => $this->faker->text,
         ];
