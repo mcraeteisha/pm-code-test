@@ -26,8 +26,10 @@ class NoteFactory extends Factory
     {
         return [
             'id' => $this->faker->uuid(),
-            'name' => $this->faker->name,
+            'name' => $this->faker->string,
             'description' => $this->faker->text,
+            'active' => $this->faker->boolean(),
+            'created_at' => $this->faker->date(),
         ];
     }
 }
