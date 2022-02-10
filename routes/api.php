@@ -22,13 +22,9 @@ Route::get('/notes', 'NoteController@index');
 
 Route::get('/notes/{id}', 'NoteController@show');
 
-Route::post('/notes', 'NoteController@store');
+//Route::post('/notes', 'NoteController@store');
 
-Route::post('/notes/{id}/description', 'PlayerController@description');
-
-Route::put('notes/{id}/descriptiop', 'PlayerController@descriptione');
+Route::post('/notes/{id}/description', 'NoteController@store');
 
 Route::delete('/notes/{id}', 'NoteController@delete');
-
-Route::delete('/players/{id}/description', 'PlayerController@description');
 
